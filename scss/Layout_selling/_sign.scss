@@ -1,0 +1,15 @@
+.sign{
+    text-align: center;
+    p{
+        @include textStyle($fs-1 + 2, $fw-0, $color-gray-2);
+    }
+    button{
+        border: none;
+        padding: 8px 26px;
+        background-color: #19a463;
+        @include textStyle($fs-1, $fw-1, $color-white);
+        &:hover{
+            background-color: #3fca89;
+        }
+    }
+}

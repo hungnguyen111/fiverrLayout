@@ -1,0 +1,95 @@
+.carousel{
+    background-color: black;
+    position: relative;
+    height: 450px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    @include mediaQuery('small'){
+        height: 565px;
+        background-color: #fff;
+    }
+    .video{
+        background-image: url(../img/seller/cover.png);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+    .carousel__top{
+        // z-index: 100;
+        position: absolute;
+        top: 22%;
+        left: 32%;
+        text-align: center;
+        @include mediaQuery('large'){
+            top: 18%;
+            left: 20%;
+        }
+        @include mediaQuery('small'){
+            top: 10%;
+            left: 20%;
+        }
+        h1{
+            @include textStyle(50px, $fw-1, $color-white);
+            @include mediaQuery('large'){
+                font-size: 40px;
+            }
+            @include mediaQuery('small'){
+                @include textStyle(25px, $fw-1, $color-white);
+            }
+        }
+        p{
+            @include textStyle($fs-2 - 2, 500, $color-white);
+            @include mediaQuery('small'){
+                @include textStyle($fs-1, $fw-0, $color-white);
+            }
+        }
+        button{
+            border: none;
+            padding: 8px 26px;
+            background-color: #19a463;
+            @include textStyle($fs-1, $fw-1, $color-white);
+            &:hover{
+                background-color: #3fca89;
+            }
+        }
+    }
+    .carousel__bot{
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 20px 30px 10px;
+        width: 100%;
+        background-color: rgba(255,255,255,.3);
+        
+        .carousel__items{
+            width: 30%;
+            text-align: center;
+            @include mediaQuery('small'){
+                padding-bottom: 20px;
+            }
+            @include mediaQuery('small'){
+                width: 90%;
+                margin: 0 auto;
+            }
+           p{
+                @include textStyle($fs-2 - 3, $fw-0, $color-white);
+                margin-bottom: 0;
+                @include mediaQuery('small'){
+                    @include textStyle($fs-0 + 1, $fw-0, $color-black);
+                }
+           }
+            h4{
+                @include textStyle(45px, $fw-3 - 100, $color-white);
+                @include mediaQuery('small'){
+                    @include textStyle($fs-2 - 1, $fw-0, $color-black);
+                }
+            }
+        }
+    }
+}

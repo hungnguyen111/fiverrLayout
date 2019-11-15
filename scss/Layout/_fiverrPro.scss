@@ -1,0 +1,56 @@
+.fiverrPro{
+    position: relative;
+    height: 300px;
+    .pro__img{
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 30px;
+            @include mediaQuery('large'){
+                padding: 0;
+            }
+        }
+    }
+    .pro__content{
+        position: absolute;
+        top: 16%;
+        left: 6%;
+        width: 50%;
+        @include mediaQuery('small'){
+            top: 16%;
+            left: 12%;   
+            width: 80%;
+        }
+        .pro__try{
+            align-items: self-end;
+            span{
+                @include textStyle($fs-0 + 1, 500, $color-white);
+            }
+            img{
+                margin-left: 10px;
+                width: 100px;
+            }
+        }
+        p{
+            padding: 20px 0;
+            @include textStyle($fs-2 + 2, $fw-0, $color-white);
+            @include mediaQuery('small'){
+                font-size: $fs-2 - 3;
+            }
+        }
+        a{
+            @include buttonStyle(transparent, $color-green-3, $color-green-3, $color-green-3, $color-green-3, $fs-1);
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: $fw-3;
+            &:hover{
+                color: $color-white;
+                transition: all .4s;
+            }
+        }
+    }
+}

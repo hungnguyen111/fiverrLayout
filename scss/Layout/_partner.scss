@@ -1,0 +1,18 @@
+.partner{
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    .row{
+        justify-content: center;
+        align-items: center;
+        @include mediaQuery('small'){
+            img:nth-child(6),img:nth-child(7){
+                display: none;
+            }
+        }
+        img{
+            padding: 0 $fs-0;
+            @include mediaQuery('large'){
+                height: 40px;
+            }
+        }
+    }
+}

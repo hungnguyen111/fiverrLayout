@@ -1,0 +1,43 @@
+.stories{
+    padding: 30px;
+    margin: 0 auto;
+    width: 98%;
+    h2{
+        @include textStyle(32px, $fw-1, $color-black);
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .row{
+        background-color: #f7f7f7;
+        .stories__items{
+            width: 25%;
+            @include mediaQuery('extra-large'){
+                width: 50%;
+            }
+            @include mediaQuery('small'){
+                width: 100%;
+            }
+            img{
+                
+                width: 100%;
+                z-index: 0;
+                
+            }
+            p{
+                padding: 60px 25px 0 25px;
+                @include textStyle($fs-1 + 2, $fw-0, $color-gray-2);
+            }
+            span{
+                padding: 10px 0 30px 25px;
+                @include textStyle($fs-1 - 2, $fw-0, $color-gray-2);
+            }
+        }
+        .stories__items1{
+
+            img{
+
+                
+            }
+        }
+    }
+}

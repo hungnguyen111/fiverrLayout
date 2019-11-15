@@ -1,0 +1,31 @@
+.confidence{
+    .confidence__left{
+        padding-right: 120px;
+        h2{
+            padding-bottom: $fs-2 - 2;
+            @include textStyle($fs-2, $fw-1, $color-black);
+        }
+        h6{
+            @include textStyle($fs-1 + 1, $fw-1, $color-black);
+            i{
+                color: #1dbf73;
+                font-size: $fs-1;
+                padding-right: $fs-0 - 2;
+            }
+        }
+        p{
+            padding-bottom: $fs-2 - 2;
+            @include textStyle($fs-0 - 1, $fw-0, $color-gray-2);
+        }
+    }
+    .confidence__right{
+        position: relative;
+        img{
+            cursor: pointer;
+            width: 100%;
+        }
+        i{
+            @include videoButton(80px);
+        }
+    }
+}

@@ -1,0 +1,141 @@
+header{
+    background-color: $color-white;
+    z-index: 100;
+    .menu{
+        .menu__bars{
+            display: none;
+            @include mediaQuery('extra-large'){
+                display: block;
+                @include textStyle(28px, $fw-0, $color-black);
+            }
+        }
+        .navbar-brand{
+            padding: 5px 15px 5px 20px;
+            @include textStyle($fs-2 + 8, $fw-2, $color-black-1);
+            @include mediaQuery('small'){
+                padding-left: 30%;
+            }
+        }
+        .search2{
+            width: 90%;
+            margin: 10px auto;
+            .form-control{
+                display: none;
+                @include mediaQuery('small'){
+                    display: block;
+                    padding: 5px;
+                    height: 30px;
+                    border-radius: 3px;
+                }
+                &:focus{
+                    border: 1px #999 solid;
+                    color: #222325;
+                    box-shadow: inset 2px 2px 2px #e4e5e7;
+                    border-right: none;
+                }
+                &::placeholder{
+                    color: $color-gray;
+                    font-size: $fs-0;
+                }
+            }
+
+        }
+        .navbar-collapse{
+            .form-inline{
+                .form-control{
+                    width: 280px;
+                    margin-right: -5px;
+                    border-radius: 3px 0 0 3px;
+                    position: relative;
+                    border-right: none;
+                    height: 34px;
+                    &:focus{
+                        border: 1px #999 solid;
+                        color: #222325;
+                        box-shadow: inset 2px 2px 2px #e4e5e7;
+                        border-right: none;
+                    }
+                    &::placeholder{
+                        color: $color-gray-2;
+                        font-size: $fs-0;
+                    }
+                    @include mediaQuery('extra-large'){
+                        border-radius: 3px;
+                        border-right: 1px solid $color-gray;
+                        width: 220px;
+                        &:focus{
+                            border: 1px #999 solid;
+                        }
+                    }
+                    @include mediaQuery('small'){
+                        display: none;
+                        width: 100%;
+                    }
+                }
+                
+                .search{
+                    border-radius: 0 3px 3px 0;
+                    color: $color-white;
+                    font-size: $fs-0 - 2;
+                    font-weight: $fw-3;
+                    text-shadow: none;
+                    background: #1dbf73;
+                    border: 1px solid #1dbf73;
+                    height: 34px;
+                    &:focus{
+                        box-shadow: none;
+                    }
+                    @include mediaQuery('extra-large'){
+                        display: none;
+                    }
+                }
+            }
+            .navbar__right{
+                padding-right: 20px;
+                @include mediaQuery('small'){
+                    padding-right: 0;
+                }
+                a{
+                    @include textStyle($fs-1 - 2,$fw-3,$color-gray-2);
+                }
+                .nav-item2{
+                    @include mediaQuery('large'){
+                        display: none;
+                    }
+                }
+                .nav-item3{
+                    @include mediaQuery('small'){
+                        display: none;
+                    }
+                }
+                .active{
+                    a{
+                        @include textStyle($fs-1 - 2,$fw-3,#1fd0b6);
+                        &:hover{
+                            opacity: .7;
+                        }
+                        @include mediaQuery('large'){
+                            display: none;
+                        }
+                    }
+                }
+                button{
+                    font-weight: $fw-3;
+                    @include buttonStyle(transparent, $color-green,$color-white,$color-green , $color-green, $fs-1);
+                    padding: 3px 10px;
+                    margin-left: 20px;
+                    @include mediaQuery('small'){
+                        border: none;
+                        background-color: transparent;
+                        color: $color-gray-2;
+                        &:hover{
+                            background-color: transparent;
+                            color: $color-black-1;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

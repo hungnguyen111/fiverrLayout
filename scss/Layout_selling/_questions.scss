@@ -1,0 +1,41 @@
+.questions{
+    background-color: #f7f7f7;
+    padding: 50px 40px;
+    text-align: center;
+    .questions__content{
+        width: 47%;
+        margin: 0 auto;
+        @include mediaQuery('medium'){
+            width: 90%;
+        }
+        .card{
+            margin: 15px 0;
+            text-align: left;
+            border: none;
+            position: relative;
+            cursor: pointer;
+            &:hover{
+                border-left: 4px solid $color-green;
+                .card-header{
+                    
+                }
+            }
+            .card-header{
+                background-color: $color-white;
+                padding: 5px 10px;
+                border-bottom: none;
+                h2{
+                   button{
+                       text-decoration: none;
+                       @include textStyle($fs-0, $fw-1, $color-black);
+                   }
+                }
+            }
+            .collapse{
+                .card-body{
+                    @include textStyle($fs-0, $fw-0, $color-black);
+                }
+            }
+        }
+    }
+}

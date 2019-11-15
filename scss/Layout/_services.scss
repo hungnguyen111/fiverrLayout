@@ -1,0 +1,32 @@
+.services{
+    padding: 50px 15px;
+    h2{
+        padding: 0 18px;
+        @include textStyle($fs-2, $fw-1, $color-black);
+    }
+    .services__carousel{
+        position: relative;
+        .services__content{
+            padding: 15px 18px;
+            .servicer__items{
+                position: relative;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                }
+                .services__p{
+                    position: absolute;
+                    top: 7%;
+                    left: 9%;
+                    p{
+                        margin-bottom: 0;
+                        @include textStyle($fs-0 + 1, $fw-0, $color-white);
+                    }
+                    h4{
+                        @include textStyle($fs-2 - 4, $fw-1, $color-white);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.works{
+    background-color: #f7f7f7;
+    text-align: center;
+    h2{
+        @include textStyle(32px, $fw-1, $color-black);
+        padding-bottom: 30px;
+    }
+    .row{
+        width: 100%;
+        justify-content: space-around;
+        .works__items{
+            width: 29%;
+            h3{
+                @include textStyle($fs-2 - 4, $fw-1, #555555);
+                padding: 20px 0 0;
+            }
+            p{
+                @include textStyle($fs-1, $fw-0, $color-gray-2);
+            }
+        }
+    }
+}

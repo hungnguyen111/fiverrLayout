@@ -1,0 +1,34 @@
+.guides{
+    position: relative;
+    .guides__a{
+        position: absolute;
+        text-decoration: none;
+        top: 8px;
+        right: 30px;
+        @include textStyle($fs-0, $fw-0, #00698c);
+        @include mediaQuery('large'){
+            display: none;
+        }
+    }
+    h2{
+        padding-left: 16px;
+        padding-bottom: $fs-2 - 2;
+        @include textStyle($fs-2, $fw-1, $color-black);
+    }
+    .guides__items{
+        width: 100%;
+        padding: 0 10px;
+        .guides__row{
+            img{
+                width: 100%;
+            }   
+            h6{
+                padding: 30px 0 0;
+                @include textStyle($fs-1 + 1, $fw-1, $color-black);
+            }
+            p{
+                @include textStyle($fs-0 + 1, $fw-0, $color-black);
+            }
+        }
+    }
+}

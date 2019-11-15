@@ -1,0 +1,54 @@
+.find{
+    position: relative;
+    height: 300px;
+    margin: 50px 0;
+    .find__img{
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 30px;
+            @include mediaQuery('large'){
+                padding: 0;
+            }
+        }
+    }
+    .find__content{
+        position: absolute;
+        top: 16%;
+        left: 25%;
+        width: 50%;
+        text-align: center;
+        @include mediaQuery('small'){
+            top: 16%;
+            left: 10%;   
+            width: 80%;
+        }
+        h2{
+            @include textStyle($fs-2, $fw-1, $color-black);
+            @include mediaQuery('small'){
+                font-size: $fs-2 - 5;
+            }
+        }
+        p{
+            padding: 20px 0;
+            @include textStyle($fs-1 + 1, $fw-0, $color-black);
+            @include mediaQuery('small'){
+                font-size: $fs-1 ;
+            }
+        }
+        a{
+            @include buttonStyle($color-green-5, $color-white,$color-white, $color-green-5, $color-green-4, $fs-1);
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: $fw-3;
+            &:hover{
+                color: $color-white;
+                transition: all .4s;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+.learn{
+    .learn__content{
+        width: 95%;
+        margin: 50px auto;
+        padding: 20px 30px;
+        background-color: #f7f7f7;
+        .learn__items{
+            width: 50%;
+            padding: 20px 30px;
+            @include mediaQuery('large'){
+                width: 100%;
+            }
+            h2{
+                padding: 15px 0 10px;
+                @include textStyle($fs-2 - 1, $fw-1, $color-black);
+            }
+            p{
+                padding-bottom: 15px;
+                @include textStyle($fs-1 - 1, $fw-0, $color-gray-2);
+            }
+            button{
+                border: none;
+                padding: 8px 26px;
+                background-color: #19a463;
+                @include textStyle($fs-1, $fw-1, $color-white);
+                &:hover{
+                    background-color: #3fca89;
+                }
+            }
+        }
+        .learn__items2{
+            position: relative;
+            height: 100%;
+            img{
+                width: 100%;
+                border-radius: 5px;
+            }
+            .fa-play{
+                @include videoButton(60px);
+                top: 35%;
+                border: 2px solid $color-white;
+                &:hover{
+                    background-color: rgba(0, 0, 0, .8);
+                }
+                @include mediaQuery('small'){
+                    @include videoButton(50px);
+                    font-size: $fs-1;
+                    top: 30%;
+                }
+            }
+
+            .learn__video{
+                position: absolute;
+                bottom: 26px;
+                left: 10%;
+                @include mediaQuery('small'){
+                    left: 13%;
+                }
+                h3{
+                    @include textStyle($fs-1, $fw-1, $color-white);
+                    span{
+                        padding: 4px 8px;
+                        margin-left: 10px;
+                        @include textStyle($fs-1 - 1, $fw-1, $color-white);
+                        background-color: $color-green;
+                    }
+                    @include mediaQuery('small'){
+                        font-size: $fs-1 - 4;
+                    }
+                }
+                .fa-star{
+                    color: #ffc100;
+                    font-size: $fs-0 - 2;
+                }
+                strong{
+                    color: #ffc100;
+                    font-size: $fs-0 - 2;
+                }
+                span:last-child{
+                    color: $color-white;
+                    font-size: $fs-0 - 2;
+                }
+            }
+        }
+    }
+}
